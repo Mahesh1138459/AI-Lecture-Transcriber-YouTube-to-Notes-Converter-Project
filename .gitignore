@@ -1,0 +1,74 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Icon?
+Desktop.ini
+
+# Node.js
+node_modules/
+npm-debug.log
+yarn-error.log
+.env
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+.env
+venv
+venv_ai
+.venv_ai/
+venv_ai/
+
+# Java
+*.class
+*.jar
+*.war
+*.ear
+
+# Build
+build/
+dist/
+*.egg-info/
+*.egg
+*.log
+
+# Composer (PHP)
+vendor/
+composer.lock
+
+# Ruby
+.bundle/
+Gemfile.lock
+
+# JetBrains IDEs
+.idea/
+*.iml
+
+# VSCode
+.vscode/
+
+# Logs and Temp Files
+*.log
+*.tmp
+
+# Docker
+*.dockerignore
+docker-compose.override.yml
+
+# General IDE
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+build
+dist
+AI_Project.egg-info
