@@ -70,7 +70,24 @@ def main():
     st.title("YouTube Transcript to Detailed Notes Converter")
 
     subject = st.selectbox("Select Subject:", ["Physics", "Chemistry", "Mathematics", "Data Science and Statistics"])
-    language_code = st.selectbox("Select Transcript Language:", ["en", "hi", "fr", "es", "de", "ja", "zh-Hans"])  # Add more languages as needed
+    language_code = st.selectbox("Select Transcript Language:", [
+        "en",  # English
+        "hi",  # Hindi
+        "ta",  # Tamil
+        "te",  # Telugu
+        "bn",  # Bengali
+        "mr",  # Marathi
+        "gu",  # Gujarati
+        "kn",  # Kannada
+        "ml",  # Malayalam
+        "pa",  # Punjabi
+        "or",  # Odia
+        "fr",  # French
+        "es",  # Spanish
+        "de",  # German
+        "ja",  # Japanese
+        "zh-Hans"  # Simplified Chinese
+    ])  # Add more languages as needed
     youtube_link = st.text_input("Enter YouTube Video Link:")
 
     if youtube_link:
