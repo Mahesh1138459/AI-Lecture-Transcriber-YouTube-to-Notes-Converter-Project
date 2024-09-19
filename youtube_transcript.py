@@ -1,18 +1,18 @@
 
-from youtube_transcript_api import YouTubeTranscriptApi
+from youtube_transcript_api import YouTubeTranscriptApi, NoTranscriptFound
 
-def extract_transcript(youtube_video_url):
+
+def extract_transcript(youtube_video_url, language_code):
     try:
         video_id = youtube_video_url.split("=")[-1]
+        transcript = YouTubeTranscriptApi.get_transcript(video_id, languages=[language_code])
 
-        transcript = YouTubeTranscriptApi.get_transcript(video_id)
-
-        transcript_text = ""
-        for i in transcript:
-            transcript_text += " " + i["text"]
-
+        transcript_text = " ".join([entry["text"] for entry in transcript])
         return transcript_text
+    except NoTranscriptFound:
+        st.error(f"No transcript found for the selected language: {language_code}.")
+        return None
     except Exception as e:
-        print(f"Error extracting transcript: {e}")
+        st.error(f"Error extracting transcript: {e}")
         return None
     
